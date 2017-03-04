@@ -1,6 +1,6 @@
 <footer>
   <div class="container">
-    <p>&copy; HackerYou <?php echo date('Y'); ?></p>
+    <p>&copy; Maya Ben David, Coded and Designed by <a href="http://www.mohammadrezaei.com">Mohammad Rezaei</a></p>
   </div>
 </footer>
 

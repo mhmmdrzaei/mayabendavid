@@ -20,11 +20,26 @@
         <?php bloginfo( 'name' ); ?>
       </a>
     </h1>
+ <div class="fuckyou" id="">
+       <div class="fa fa-bars " title="menu">
+        <div id="nav-icon4">
+         <span></span>
+         <span></span>
+         <span></span>
+       </div>
+       </div>
 
-    <?php wp_nav_menu( array(
-      'container' => false,
-      'theme_location' => 'primary'
-    )); ?>
+       
+     </div> 
+     <div class="Menuflex" id="Menuflex">
+           <div class="menuContent away" >
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_location' => 'primary'
+        )); ?>
+          
+        </div>
+     </div>
   </div> <!-- /.container -->
 </header><!--/.header-->
 
