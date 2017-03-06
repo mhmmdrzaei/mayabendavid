@@ -30,7 +30,7 @@
             </div>
 
             <?php while(has_sub_fields('file_uploader') ): ?>
-            <div class="cvpdf">
+            <div class="filepdf">
               <?php 
                   
                       $file = get_sub_field('the_file');
