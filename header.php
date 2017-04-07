@@ -14,7 +14,7 @@
 <body <?php body_class(); ?>>
 
 <header>
-  <div class="container">
+  <div class="container headerContainer">
     <h1>
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <?php bloginfo( 'name' ); ?>
