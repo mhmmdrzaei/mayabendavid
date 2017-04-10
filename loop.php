@@ -16,12 +16,13 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 	<div class="eachPost">
-		<?php the_post_thumbnail( 'large' ) ?> 
-		<h2 class="entry-title">
-		        <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+	 <a href="<?php the_permalink(); ?>" title="Permalink to: <?php esc_attr(the_title_attribute()); ?>" rel="bookmark">
+	 <h3 class="entry-title">
 		          <?php the_title(); ?>
-		        </a>
-		      </h2>
+		      </h3>
+		<?php the_post_thumbnail( 'large' ) ?> 
+		
+	</a>	      
 	</div>
 
 

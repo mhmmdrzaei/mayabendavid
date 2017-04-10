@@ -10,14 +10,91 @@
 @import 'normalize';
 // @import 'typography';
 // @import 'navigation';
-@import 'sidebar';
-@import 'comments';
-@import 'footer';
+// @import 'sidebar';
+// @import 'comments';
+// @import 'footer';
 /*
 ====================================
 Default Styling
 ====================================
 */
+// fonts 
+
+$headfont: 'Nosifer', cursive; 
+$bodyfont:'Ubuntu', sans-serif;
+
+@mixin fontSize($sizeValue){
+    font-size: $sizeValue * 1px;
+    font-size: ($sizeValue/10) * 1rem;
+}
+
+// p's & h's
+// P's & H's
+
+h1{
+	@include fontSize(35);
+	font-family: $headfont;
+	color: white;
+
+}
+h2 {
+	@include fontSize(21);
+	text-transform: uppercase;
+	font-family: $bodyfont;
+	font-weight: bold;
+	color: white;
+	
+	}
+h3 {
+	@include fontSize(14);
+	font-family: $bodyfont;
+	color: white;
+	font-weight: bold;
+	margin: 0;
+	text-transform: uppercase;
+	a {
+		color:white;
+		&:hover {
+			color: grey;
+			text-decoration: underline;
+		}
+	}
+
+}
+
+h4{
+	@include fontSize(10);
+	font-family: $bodyfont;
+	color:white;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+	&:hover {
+		color: #grey;
+    	}
+}
+
+p {	
+	// letter-spacing: 1px;
+	font-family: $bodyfont;
+	color: white;
+	@include fontSize(9);
+	a {
+		color:#grey;
+		text-decoration: none;
+		&:hover {
+			color: #grey;
+			text-decoration: underline;
+		}
+	}
+
+}
+.flex {
+	display: flex;
+	flex-flow: row wrap;
+}
 
 img {
 	max-width: 100%;
@@ -41,9 +118,8 @@ a {
 }
 
 .content {
-	float: left;
-	width: 65%;
-	margin-right: 5%;
+	margin: 0 auto;
+	width: 95%;
 }
 
 .full {
@@ -54,6 +130,7 @@ a {
 	display: flex;
 	justify-content: space-between;
 	align-items: center; 
+	width: 95%;
 	ul.menu {
 	margin: 0;
 	padding: 0;
@@ -68,10 +145,42 @@ a {
 			padding: 10px;
 			// background: #333;
 			color: white;
+			font-family: $bodyfont;
+			color: white;
+			font-weight: bold;
+
+			&:hover {
+				color: red;
+				// text-decoration: underline;
+			}
 		}
 	}
 }
 }
+
+//front page
+.frontContent{
+	@extend .flex;
+}
+.eachPost:nth-child(1) {
+	width: 100%;
+	h3 {
+		@include fontSize(14);
+	}
+}
+.eachPost {
+	width: 50%;
+	padding: 3%;
+	h3 {
+		margin-bottom: 10px;
+		@include fontSize(12);
+	}
+	img {
+		width: 100%;
+		height: 100%;
+	}
+}
+
 
 
 
