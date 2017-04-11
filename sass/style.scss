@@ -28,15 +28,14 @@ $bodyfont:'Ubuntu', sans-serif;
     font-size: ($sizeValue/10) * 1rem;
 }
 
-// p's & h's
 // P's & H's
 
-h1{
-	@include fontSize(35);
+h1 {
+	@include fontSize(28);
 	font-family: $headfont;
 	color: white;
 
-}
+	}
 h2 {
 	@include fontSize(21);
 	text-transform: uppercase;
@@ -131,6 +130,7 @@ a {
 	justify-content: space-between;
 	align-items: center; 
 	width: 95%;
+
 	ul.menu {
 	margin: 0;
 	padding: 0;
@@ -142,27 +142,37 @@ a {
 		margin-right: 10px;
 		a {
 			color: #333;
-			padding: 10px;
+			margin: 10px;
+			padding: 2px 2px;
 			// background: #333;
 			color: white;
 			font-family: $bodyfont;
 			color: white;
 			font-weight: bold;
 
-			&:hover {
-				color: red;
-				// text-decoration: underline;
-			}
+			// &:hover {
+			// 	color: grey;
+			// 	border-bottom: 3px solid grey;
+			// 	// text-decoration: underline;
+			// }
 		}
 	}
 }
 }
+.active{
+   text-decoration: line-through;
+}
+.activeMenu {
+	border-bottom: 3px solid white;
+	// text-decoration: line-through !important;
+}
 
 //front page
-.frontContent{
+.frontContent, .indexContent{
 	@extend .flex;
+	align-items: flex-end;
 }
-.eachPost:nth-child(1) {
+.frontContent .eachPost:nth-child(1) {
 	width: 100%;
 	h3 {
 		@include fontSize(14);
@@ -170,6 +180,7 @@ a {
 }
 .eachPost {
 	width: 50%;
+	height: 50%;
 	padding: 3%;
 	h3 {
 		margin-bottom: 10px;
@@ -180,7 +191,10 @@ a {
 		height: 100%;
 	}
 }
-
+//contact 
+.socialMediaAll {
+	@extend .flex
+}
 
 
 

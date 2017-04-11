@@ -16,11 +16,11 @@
 
 <header>
   <div class="container headerContainer">
-    <h1>
+
       <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <?php bloginfo( 'name' ); ?>
+        <h1><?php bloginfo( 'name' ); ?></h1>
       </a>
-    </h1>
+
  <div class="fuckyou" id="">
        <div class="fa fa-bars " title="menu">
         <div id="nav-icon4">
