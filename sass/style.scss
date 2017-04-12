@@ -238,7 +238,22 @@ a {
 		height: 50%;
 	}
 }
-
+// single post
+ul.bxslider {
+	display: flex;
+	padding: 0;
+    margin: 11px auto;
+	li {
+		list-style: none;
+		margin: 0 5px;
+		img {
+			max-height: 100px;
+		}
+	}
+}
+.singlePost {
+	width: 95%;
+}
 //footer
 footer {
 	width: 95%;
