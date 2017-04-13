@@ -44,17 +44,36 @@
           <?php endwhile;//end of CV PDF ?>
 
             <?php if( have_rows('images') ) : ?>
-                               <ul class="bxslider">
-                                   <?php while( have_rows('images') ) : the_row(); ?>
-                                       <li>
-                                           <?php $image = get_sub_field('image_works');
-                                               if( !empty($image) ): ?>
-                                                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                              
-                                               <?php endif; ?>
-                                       </li>
-                                   <?php endwhile; ?>
-                               </ul><!-- .bxslider -->
+          <div style="display:none;" >
+            <div id="ninja-slider">
+              <div class="slider-inner">
+                <ul >
+                    <?php while( have_rows('images') ) : the_row(); ?>
+                        <li>
+                            <?php $image = get_sub_field('image_works');
+                                if( !empty($image) ): ?>
+                                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                               
+                                <?php endif; ?>
+                        </li>
+                    <?php endwhile; ?>
+                </ul><!-- .bxslider -->
+                </div>
+            </div>
+          </div>
+            <?php endif;  // end gallery repeater field?>
+                      <?php if( have_rows('images') ) : ?>
+               <ul class="bxslider gallery">
+                   <?php while( have_rows('images') ) : the_row(); ?>
+                       <li>
+                           <?php $image = get_sub_field('image_works');
+                               if( !empty($image) ): ?>
+                                   <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" onclick="lightbox()" />
+                              
+                               <?php endif; ?>
+                       </li>
+                   <?php endwhile; ?>
+               </ul><!-- .bxslider -->
             <?php endif;  // end gallery repeater field?>
 
 

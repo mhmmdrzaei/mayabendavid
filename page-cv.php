@@ -1,7 +1,7 @@
 <?php get_header();  ?>
 
 <div class="main">
-  <div class="container">
+  <div class="container cvContainer">
   	<div class="socialMediaAll">
       <?php while(has_sub_fields('social_media') ): ?>
       

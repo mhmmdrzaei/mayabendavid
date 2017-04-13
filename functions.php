@@ -80,6 +80,13 @@ function hackeryou_scripts() {
     null, // version number
     true //load in footer
   );
+  wp_enqueue_script(
+    'ninja-slide', //handle
+    get_template_directory_uri() . '/js/ninja-slider.js', //source
+    array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
 }
 
 add_action( 'wp_enqueue_scripts', 'hackeryou_scripts');
