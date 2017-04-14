@@ -6,7 +6,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<link href="https://fonts.googleapis.com/css?family=Nosifer|Ubuntu:400,700" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Nosifer|Montserrat:400,700" rel="stylesheet">
   <!-- stylesheets should be enqueued in functions.php -->
   <?php wp_head(); ?>
 </head>

@@ -22,7 +22,7 @@ Default Styling
 // fonts 
 
 $headfont: 'Nosifer', cursive; 
-$bodyfont:'Ubuntu', sans-serif;
+$bodyfont:'Montserrat', sans-serif;
 
 @mixin fontSize($sizeValue){
     font-size: $sizeValue * 1px;
@@ -74,7 +74,7 @@ a {
 	text-decoration: none;
 	color: white;
 	&:hover {
-		color: #grey;
+		color:#FF3898;;
     	}
 }
 
@@ -111,7 +111,7 @@ a {
 	text-decoration: none;
 	color:White;
 	&:hover {
-		color: #grey;
+		color: #FF3898;
     	}
 }
 
@@ -128,6 +128,15 @@ a {
 
 .full {
 	width: 100%;
+}
+//Backgrounds 
+.index {
+	background-image: url('images/backgroundstorm.gif');
+	background-size: cover; 
+}
+body.page-id-33 {
+	background-image: url('images/vortex.gif');
+	background-size: cover; 
 }
 //header
 .headerContainer {
@@ -146,13 +155,10 @@ a {
 		
 		margin-right: 10px;
 		a {
-			color: #333;
 			margin: 10px;
 			padding: 2px 2px;
-			// background: #333;
-			color: white;
+			// color: white;
 			font-family: $bodyfont;
-			color: white;
 			font-weight: bold;
 
 			// &:hover {
@@ -165,10 +171,11 @@ a {
 }
 }
 .active{
-   text-decoration: line-through;
+   // text-decoration: line-through;
 }
 .activeMenu {
-	border-bottom: 3px solid white;
+	color: #FF3898;	
+	// border-bottom: 3px solid #FF3898;
 	// text-decoration: line-through !important;
 }
 
@@ -208,7 +215,23 @@ a {
 }
 //contact 
 .socialMediaAll {
-	@extend .flex
+	justify-content: flex-end;
+	@extend .flex;
+
+	.socialMediaPage {
+
+		a {
+					position: relative;
+				left: 70%;
+			img {
+
+				width: 30%;
+				
+			
+			}
+		}
+	}
+
 
 }
 .socialMediaTitle {
@@ -217,7 +240,7 @@ a {
 
 }
 .socialMediaPage {
-	margin-right: 25px;
+	margin-left: 25px;
 }
 .contactContent {
 	margin: 10px 30px;
@@ -241,13 +264,17 @@ a {
 }
 //about 
 .aboutContent {
+	@extend .flex;
 	width: 95%;
-	margin: 0 auto;
+	margin: 30px auto;
 	padding: 20px 0;
 	img {
 		width: 50%;
 		height: 50%;
 	}
+}
+.aboutContentText {
+	width: 45%;
 }
 // single post
 ul.bxslider {
@@ -296,16 +323,16 @@ footer {
 	}
 	.socialMediaAll{
 		display: block;
+		 
 		.socialMediaPage {
 			// width: 25%;
 			margin: 15px auto;
 			a{
 				display: flex;
 				align-items: center;
+				
 			}
-			img {
-				width: 50%
-			}
+
 		}
 	}
 	.cvContainer{
