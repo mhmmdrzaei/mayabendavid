@@ -130,11 +130,11 @@ a {
 	width: 100%;
 }
 //Backgrounds 
-.index {
+.blog, .page-id-11 {
 	background-image: url('images/backgroundstorm.gif');
 	background-size: cover; 
 }
-body.page-id-33 {
+.page-id-15 {
 	background-image: url('images/vortex.gif');
 	background-size: cover; 
 }
@@ -219,14 +219,11 @@ body.page-id-33 {
 	@extend .flex;
 
 	.socialMediaPage {
+		    width: 3%;
 
 		a {
-					position: relative;
-				left: 70%;
 			img {
-
-				width: 30%;
-				
+				width: 100%;
 			
 			}
 		}
@@ -240,14 +237,45 @@ body.page-id-33 {
 
 }
 .socialMediaPage {
-	margin-left: 25px;
+	margin-left: 10px;
 }
 .contactContent {
 	margin: 10px 30px;
 	// text-align: center;
 }
+.socialMediaAllContact {
+	max-width: 700px;
+	margin: 0 auto;
+	@extend .flex;
+	.socialMediaPageContact {
+		width: 30%;
+		margin: 10px 10px 6px;
+		a {
+			// @extend .flex;
+			align-items: center;
+			.socialMediaImageContact {
+				img {
+					width: 70px;
+				}
+			}
+			.socialMediaTitleContact {
+				margin: 3px 0;
+				@include fontSize(9);
+			}
+		}
+	}
+}
 
 //CV 
+.socialMediaAllCV {
+	@extend .flex;
+	width: 95%;
+	margin: 0 auto;
+	@include fontSize(9);
+	a {
+		margin-right: 10px;
+	}
+}
 .socialMediaAll {
 	@extend .flex;
 	width: 95%;
@@ -265,6 +293,7 @@ body.page-id-33 {
 //about 
 .aboutContent {
 	@extend .flex;
+	align-items: center;
 	width: 95%;
 	margin: 30px auto;
 	padding: 20px 0;
@@ -321,18 +350,18 @@ footer {
 	.contactContent {
     margin: 10px 2%;
 	}
-	.socialMediaAll{
+	.socialMediaAll .socialMediaPage {
+	    width: 6%;
+	    justify-content: flex-start; 
+	}
+	.aboutContent {
 		display: block;
-		 
-		.socialMediaPage {
-			// width: 25%;
-			margin: 15px auto;
-			a{
-				display: flex;
-				align-items: center;
-				
-			}
-
+		img {
+			width: 100%;
+			height: 100%;
+		}
+		.aboutContentText {
+			width: 100%;
 		}
 	}
 	.cvContainer{
@@ -413,6 +442,31 @@ footer {
 
 }
 @media (max-width: 600px){
+		.socialMediaAll {
+		display: none;
+	}
+	.socialMediaAllContact {
+	max-width: 95%;
+	display: block;
+	
+	.socialMediaPageContact {
+		width: 100%;
+		margin: 10px 10px 6px;
+		a {	
+			display: flex;
+			align-items: center;
+			.socialMediaImageContact {
+				img {
+					width: 70px;
+				}
+			}
+			.socialMediaTitleContact {
+				margin-left: 10px;
+				@include fontSize(9);
+			}
+		}
+	}
+}
 	ul.bxslider li img {
 	    max-height: 65px;
 	}
@@ -440,6 +494,7 @@ footer {
 	}
 }
 @media (max-width: 400px){
+
 	#ninja-slider{
 		height: 250px !important;
 	}

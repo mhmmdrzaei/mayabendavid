@@ -2,11 +2,11 @@
 
 <div class="main">
   <div class="container cvContainer">
-  	<div class="socialMediaAll">
+  	<div class="socialMediaAllCV">
       <?php while(has_sub_fields('social_media') ): ?>
       
         
-          <div class="socialMediaPage">
+          <div class="socialMediaPageCV">
           <a href="<?php the_sub_field('social_media_link'); ?>">
             <?php $image = get_sub_field('social_media_image');
                 if( !empty($image) ): ?>

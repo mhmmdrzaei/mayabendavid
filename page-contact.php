@@ -10,20 +10,20 @@
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   
          <div class="contactContent"> <?php the_content(); ?></div>
-          <div class="socialMediaAll">
+          <div class="socialMediaAllContact">
             <?php while(has_sub_fields('social_media') ): ?>
     
           
-            <div class="socialMediaPage">
+            <div class="socialMediaPageContact">
             <a href="<?php the_sub_field('social_media_link'); ?>">
               <?php $image = get_sub_field('social_media_image');
                   if( !empty($image) ): ?>
-                      <div class="socialMediaImage">
+                      <div class="socialMediaImageContact">
                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                         </div>
                  
                   <?php endif; ?>
-                  <div class="socialMediaTitle">
+                  <div class="socialMediaTitleContact">
                     <?php the_sub_field('social_media_title'); ?>
                   </div>
             </a>
