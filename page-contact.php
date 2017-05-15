@@ -9,7 +9,9 @@
   
         <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
   
-         <div class="contactContent"> <?php the_content(); ?></div>
+                   <div class="emailPagesContact">
+                      <a href="mailto:<?php the_field('email_pages'); ?>"><?php the_field('email_pages'); ?></a>
+              </div>
           <div class="socialMediaAllContact">
             <?php while(has_sub_fields('social_media') ): ?>
     

@@ -5,22 +5,27 @@
     <div class="container">
   
       <div class="content">
-        <div class="socialMediaAll">
-          <?php while(has_sub_fields('social_media') ): ?>
-    
-              
-                <div class="socialMediaPage">
-                <a href="<?php the_sub_field('social_media_link'); ?>">
-                  <?php $image = get_sub_field('social_media_image');
-                      if( !empty($image) ): ?>
-                          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                     
-                      <?php endif; ?>
-                      <?php the_sub_field('social_media_title'); ?>
-                </a>
+        <div class="contactAll">
+          <div class="emailPages">
+                      <a href="mailto:<?php the_field('email_pages'); ?>"><?php the_field('email_pages'); ?></a>
+              </div>
+              <div class="socialMediaAllCV">
+                <?php while(has_sub_fields('social_media') ): ?>
+                
+          
+                    <div class="socialMediaPageCV">
+                    <a href="<?php the_sub_field('social_media_link'); ?>">
+                      <?php $image = get_sub_field('social_media_image');
+                          if( !empty($image) ): ?>
+                              <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                         
+                          <?php endif; ?>
+                          <?php the_sub_field('social_media_title'); ?>
+                    </a>
+                    </div>
+                  
+                  <?php endwhile;//end of social media ?>
                 </div>
-              
-          <?php endwhile;//end of social media ?>
         </div>
         <div class="aboutContent">
           <?php // Start the loop ?>

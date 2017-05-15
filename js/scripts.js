@@ -25,6 +25,7 @@ $(function(){
             $(this).addClass("activeMenu");
         }
     });
+    // $(".eachPost:nth-child(1)").css("background", "url(<?php the_post_thumbnail( 'large' ) ?> )")
     //dropdown menu 
 
         $('.fa-bars').click(function(){
