@@ -222,7 +222,7 @@ a {
     	max-width: 100%;
     	height: auto !important;
 	}
-	max-height: 400px;
+	max-height: 490px;
     overflow: hidden;
 	width: 100%;
 	margin: 0 auto;
@@ -385,11 +385,11 @@ ul.bxslider {
 	// text-transform: uppercase;
 }
 .contentCvMain {
+	align-items: center;
 	margin-top: 20px;
 	// justify-content: space-between; 
 	@extend .flex;
 	padding-bottom: 10px;
-    border-bottom: 2px solid;
     margin-bottom: 20px;
 	// width: 95%;
 	img {
