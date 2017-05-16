@@ -357,6 +357,7 @@ ul.bxslider {
 	margin-top: 5px;
 	width: 70%;
 	left: 40px;
+	margin-right: 5px;
 	position: relative;
 	a {
 		word-wrap: break-word;
@@ -580,12 +581,24 @@ footer {
 		position: fixed;
 		z-index: 400;
 	}
+		.socialMediaAllCV{
+			margin-top: 10px;
+		}
 
 }
 @media (max-width: 600px){
+	.cv_events .context_title_cv, .link_cv {
+		left: 0;
+
+	}
+	.cv_events .location_cv{
+		left: 0;
+	}
 		.socialMediaAll {
 		display: none;
+
 	}
+
 	.socialMediaAllContact {
 	max-width: 95%;
 	display: block;
