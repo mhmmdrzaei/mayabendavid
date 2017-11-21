@@ -510,7 +510,7 @@ footer {
 	height: initial;
 }
 //Media queries
-@media (max-width: 650px){
+@media (max-width: 750px){
 	.emailPagesContact {
 		text-align: left;
 		width: 95%;
@@ -607,7 +607,7 @@ footer {
 	}
 	.menuFlexOpen {
 		position: fixed;
-		padding-top: 60px;
+		padding-top: 35px;
 		top: 6px;
 		left: 4%;
 		height: 370px;
