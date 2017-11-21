@@ -2,8 +2,7 @@
 
 <div class="main">
   <div class="container">
-    <div class="content">
-      <h1>Category Archives: <?php single_cat_title(); ?></h1>
+    <div class="content indexContent">
     	<?php
     		$category_description = category_description();
     		if ( ! empty( $category_description ) )
@@ -12,8 +11,6 @@
         ?>
 
     </div> <!-- /.content -->
-
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->

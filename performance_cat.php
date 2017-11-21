@@ -4,7 +4,8 @@
   <div class="container">
 
     <div class="content frontContent">
-     <?php get_template_part( 'loop', 'index' );	?>
+    	<?php  dynamic_sidebar( 'primary-widget-area' ); ?>
+     <?php get_template_part( 'loop', 'performance' );	?>
 
       
     </div> <!-- /,content -->

@@ -117,7 +117,8 @@ a {
 
 .container {
 	max-width: 1200px;
-	margin: 0 auto;
+	margin: 3% auto;
+	// padding: 10px;
 }
 
 .content {
@@ -144,10 +145,11 @@ a {
 }
 //header
 .headerContainer {
-	display: flex;
-	justify-content: space-between;
-	align-items: center; 
+	// align-items: center; 
 	width: 95%;
+	h1 {
+		margin: 10px 0;
+	}
 
 	ul.menu {
 	margin: 0;
@@ -190,13 +192,44 @@ a {
 .fa-bars{
 	display: none;
 }
+//tag cloud Performances 
 
+#tag_cloud-2 {
+	list-style: none;
+	width: 95%;
+    margin: 0 auto;
+	.widget-title{
+		display: none;
+	}
+	.tagcloud {
+		@extend .flex;
+		justify-content:flex-end;
+		
+		a {
+			margin-right: 2%;
+			font-size: 15px !important; 
+			font-weight: bold;
+		}
 
+	}
+}
+.active {
+	border-bottom: 2px solid #FF3898;
+	color: #FF3898;
+}
+.redProject {
+	@include fontSize(14);
+}
+.pressContent {
+	min-height: 450px;
+}
 
 //front page
 .frontContent, .indexContent{
+
 	@extend .flex;
 	align-items: flex-end;
+	min-height: 0;
 }
 
 .eachPost {
@@ -204,6 +237,7 @@ a {
 	height: 50%;
 	padding: 0 15px;
 	h3 {
+		text-shadow:1px 1px 1px rgba(0, 0, 0, 1);
 		position: relative;
 		top: 40px;
 		left: 10px;

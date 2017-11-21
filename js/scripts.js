@@ -1,4 +1,5 @@
 $(function(){
+    $(".tagcloud").append($(".tagcloud a").get().reverse());
 
 	console.log("It's working");
         //bxslider 
@@ -14,17 +15,12 @@ $(function(){
 
 //active Links 
 
-    $("ul.wp-tag-cloud li a").each(function() {
+    $(".tagcloud a").each(function() {
         if (this.href == window.location.href) {
             $(this).addClass("active");
         }
     });
 
-    $("ul.menu li a").each(function() {
-        if (this.href == window.location.href) {
-            $(this).addClass("activeMenu");
-        }
-    });
     // $(".eachPost:nth-child(1)").css("background", "url(<?php the_post_thumbnail( 'large' ) ?> )")
     //dropdown menu 
 

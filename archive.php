@@ -2,21 +2,9 @@
 
 <div class="main">
   <div class="container">
-    <div class="content">
+    <?php  dynamic_sidebar( 'primary-widget-area' ); ?>
+    <div class="content indexContent">
 
-      <?php if ( have_posts() ) the_post(); ?>
-
-      <h1>
-        <?php if ( is_day() ) : ?>
-          Daily Archives: <?php the_date(); ?>
-        <?php elseif ( is_month() ) : ?>
-          Monthly Archives: <?php the_date('F Y'); ?>
-        <?php elseif ( is_year() ) : ?>
-          Yearly Archives: <?php the_date('Y'); ?>
-        <?php else : ?>
-          Blog Archives
-        <?php endif; ?>
-      </h1>
 
       <?php
     	/* Since we called the_post() above, we need to
@@ -33,8 +21,6 @@
       ?>
 
     </div><!--/content-->
-
-    <?php get_sidebar(); ?>
 
   </div> <!-- /.container -->
 </div> <!-- /.main -->
