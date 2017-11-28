@@ -19,7 +19,7 @@
        <?php $dreamBeanQuery->the_post(); ?>
        <?php $dreamBeanQuery->the_content(); ?> 
        
-        <a class="redProject" href="<?php the_permalink(); ?>">
+        <a class="blueProject" href="<?php the_permalink(); ?>">
                      <?php the_title(); ?>
          </a>
       
